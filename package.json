@@ -1,0 +1,52 @@
+{
+  "name": "ilovepdf-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for iLovePDF API - PDF processing tools for Claude and other LLM clients",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "ilovepdf-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "npx tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "pdf",
+    "ilovepdf",
+    "claude",
+    "llm",
+    "model-context-protocol",
+    "pdf-tools",
+    "merge-pdf",
+    "compress-pdf",
+    "split-pdf"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@ilovepdf/ilovepdf-nodejs": "^0.3.1",
+    "@modelcontextprotocol/sdk": "^1.25.1",
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "typescript": "^5.9.3"
+  }
+}
